@@ -1,3 +1,11 @@
+[Notice]: We have recently become aware of a bug in our codebase that affects the results reported both on this page and in the paper.  The bug effectively leaks information to the retrieval system at test time that it should not have access to. We are working to update the code and will report corrected results as soon as possible. However, in the meantime:
+1. Until we have fixed and fully tested the code, we recommend that you don't base your work on our implementation.
+2. If you are submitting to upcoming deadlines and were planning to evaluate your method on the benchmarks we report numbers on, please point the reviewer to the [project page](https://www.robots.ox.ac.uk/~vgg/research/collaborative-experts/) so that you are not penalised for avoiding a comparison with our inaccurate numbers.
+
+We would like to thank Valentin Gabeur who spotted and notified us of the issue.
+
+---
+
 
 This repo provides code for learning and evaluating joint video-text embeddings for the task of video retrieval.  Our approach is described in the BMVC 2019 paper "Use What You Have: Video retrieval using representations from collaborative experts" ([paper](https://arxiv.org/abs/1907.13487), [project page](https://www.robots.ox.ac.uk/~vgg/research/collaborative-experts/)).
 
@@ -10,12 +18,6 @@ This repo provides code for learning and evaluating joint video-text embeddings 
 **High-level Overview**: The *Collaborative Experts* framework aims to achieve robustness through two mechanisms:
 1. The use of information from a wide range of modalities, including those that are typically always available in video (such as RGB) as well as more "specific" clues which may only occasionally be present (such as overlaid text).
 2. A module that aims to combine these modalities into a fixed size representation that in a manner that is robust to noise.
-
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/use-what-you-have-video-retrieval-using/video-retrieval-on-lsmdc)](https://paperswithcode.com/sota/video-retrieval-on-lsmdc?p=use-what-you-have-video-retrieval-using) 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/use-what-you-have-video-retrieval-using/video-retrieval-on-activitynet)](https://paperswithcode.com/sota/video-retrieval-on-activitynet?p=use-what-you-have-video-retrieval-using) 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/use-what-you-have-video-retrieval-using/video-retrieval-on-didemo)](https://paperswithcode.com/sota/video-retrieval-on-didemo?p=use-what-you-have-video-retrieval-using)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/use-what-you-have-video-retrieval-using/video-retrieval-on-msvd)](https://paperswithcode.com/sota/video-retrieval-on-msvd?p=use-what-you-have-video-retrieval-using)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/use-what-you-have-video-retrieval-using/video-retrieval-on-msr-vtt)](https://paperswithcode.com/sota/video-retrieval-on-msr-vtt?p=use-what-you-have-video-retrieval-using)
 
 
 **Requirements:** The code assumes PyTorch 1.1 and Python 3.7 (other versions may work, but have not been tested).  See the section on dependencies towards the end of this file for specific package requirements.
@@ -283,4 +285,4 @@ Otherwise, if you'd prefer to take a leaner approach, you can either:
 
 ### Acknowledgements
 
-This work was inspired by a number of prior works for learning joint embeddings of text and video, but in particular the *Mixture-of-Embedding-Experts* method proposed by Antoine Miech, Ivan Laptev and Josef Sivic ([paper](https://arxiv.org/abs/1804.02516), [code](https://github.com/antoine77340/Mixture-of-Embedding-Experts)). We would also like to thank Zak Stone and Susie Lim for their help with using Cloud TPUs.  The code structure uses the [pytorch-template](https://github.com/victoresque/pytorch-template) by @victoresque.
+This work was inspired by a number of prior works for learning joint embeddings of text and video, but in particular the *Mixture-of-Embedding-Experts* method proposed by Antoine Miech, Ivan Laptev and Josef Sivic ([paper](https://arxiv.org/abs/1804.02516)). We would also like to thank Zak Stone and Susie Lim for their help with using Cloud TPUs.  The code structure uses the [pytorch-template](https://github.com/victoresque/pytorch-template) by @victoresque.
