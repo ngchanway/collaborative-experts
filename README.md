@@ -1,4 +1,4 @@
-[Notice]: We have recently become aware of a bug in our codebase that affects the results reported both on this page and in the paper.  The bug effectively leaks information to the retrieval system at test time that it should not have access to. We are working to update the code and will report corrected results as soon as possible. However, in the meantime:
+[**Notice**]: **We have recently become aware of a bug in our codebase that affects the results reported both on this page and in the paper.** The bug effectively leaks information to the retrieval system at test time that it should not have access to. We are working to update the code and will report corrected results as soon as possible. However, in the meantime:
 1. Until we have fixed and fully tested the code, we recommend that you don't base your work on our implementation.
 2. If you are submitting to upcoming deadlines and were planning to evaluate your method on the benchmarks we report numbers on, please point the reviewer to the [project page](https://www.robots.ox.ac.uk/~vgg/research/collaborative-experts/) so that you are not penalised for avoiding a comparison with our inaccurate numbers.
 
