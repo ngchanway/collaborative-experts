@@ -2,7 +2,7 @@
 1. Until we have fixed and fully tested the code, we recommend that you don't base your work on our implementation.
 2. If you are submitting to upcoming deadlines and were planning to evaluate your method on the benchmarks we report numbers on, please point the reviewer to the [project page](https://www.robots.ox.ac.uk/~vgg/research/collaborative-experts/) so that you are not penalised for avoiding a comparison with our inaccurate numbers.
 
-We have removed the links to the models until we have resolved the bug and corrected the experiments (if you would still like to find the tables and links from before, they can be found by rolling back back one commit).
+We have removed the links to the models until we have resolved the bug and corrected the experiments (if you would still like to find the tables and links from before, they can be found by rolling back a couple of commits).
 
 We would like to thank Valentin Gabeur who spotted and notified us of the issue.
 
@@ -20,6 +20,3 @@ This repo provides code for learning and evaluating joint video-text embeddings 
 **High-level Overview**: The *Collaborative Experts* framework aims to achieve robustness through two mechanisms:
 1. The use of information from a wide range of modalities, including those that are typically always available in video (such as RGB) as well as more "specific" clues which may only occasionally be present (such as overlaid text).
 2. A module that aims to combine these modalities into a fixed size representation that in a manner that is robust to noise.
-
-
-**Requirements:** The code assumes PyTorch 1.1 and Python 3.7 (other versions may work, but have not been tested).  See the section on dependencies towards the end of this file for specific package requirements.
